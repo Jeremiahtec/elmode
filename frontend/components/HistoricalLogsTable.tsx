@@ -14,8 +14,7 @@ interface TelemetryLog {
 export default function HistoricalLogsTable() {
   const [logs, setLogs] = useState<TelemetryLog[]>([]);
   const [isResetting, setIsResetting] = useState(false); // Add loading state
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080";
-
+const BACKEND_URL = "https://elmode-backend.onrender.com";
   useEffect(() => {
     const fetchLogs = async () => {
       try {
