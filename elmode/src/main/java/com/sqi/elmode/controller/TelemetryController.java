@@ -1,17 +1,19 @@
 package com.sqi.elmode.controller;
 
-import com.sqi.elmode.model.TelemetryRecord;
-import com.sqi.elmode.repository.TelemetryRepository;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
+
+import com.sqi.elmode.model.TelemetryRecord;
+import com.sqi.elmode.repository.TelemetryRepository;
 
 @RestController
 @RequestMapping("/api/telemetry")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class TelemetryController {
 
     private final TelemetryRepository repository;
